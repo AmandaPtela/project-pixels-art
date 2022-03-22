@@ -1,0 +1,45 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    text-align: center;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+ 
+}
+
+#preto {
+    background-color: black;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+#verde {
+    background-color: green;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+#rosa {
+    background-color: pink;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+#azul {
+    background-color: blue;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
