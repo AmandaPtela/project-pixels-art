@@ -26,6 +26,8 @@ h1{
   align-items: center;
   height: 120px;
   width: 100%;
+  margin-top: -25px;
+  margin-bottom: -25px;
 }
 
 #preto {
@@ -35,7 +37,11 @@ h1{
   width: 50px;
 }
 
-#verde {
+/*:hover #verde {
+  height: 55px;
+  width: 55px;
+}*/
+#verde{
   background-color: green;
   border: 1px solid black;
   height: 50px;
@@ -73,6 +79,7 @@ h1{
   justify-content: center;
   height: 250px;
   width: 210px;
+  margin-bottom:-15px;
 }
 
 .pixel {
