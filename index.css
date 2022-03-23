@@ -1,15 +1,23 @@
 body {
-	display: block;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow:row;
+	flex-flow:column;
   padding: 0px;
+  padding-top: 5px;
   margin: 0px;
 }
 
 header {
   text-align: center;
-  background-color: antiquewhite;
+  min-width: 250px;
+  font-family: 'Courier New', Courier, monospace;
+}
+h1{
+  background-color: rgba(187, 158, 201, 0.623);
+  padding: 20px;
+  border-radius: 1em;
+  color: rgb(55, 71, 66);
 }
 
 #color-palette {
@@ -53,7 +61,10 @@ header {
   flex-direction: column;
 	justify-content: center;
   align-items: center;
-	width: 100%;
+	width: fit-content;
+  padding: 20px;
+  background-color: rgba(187, 158, 201, 0.623);
+  border-radius: 1.5em;
 }
 
 #pixel-board {
