@@ -1,16 +1,15 @@
-let pegarCorPreta = getElementById('preto');
-let pegarCorVerde = getElementById('verde');
-let pegarCorRosa = getElementById('rosa');
-let pegarCorAzul = getElementById('azul');
+const pegarCorPreta = getElementById('preto');
+const pegarCorVerde = getElementById('verde');
+const pegarCorRosa = getElementById('rosa');
+const pegarCorAzul = getElementById('azul');
 
-let pixel1 = getElementById('1');
+let pixel1 = getElementByClassName('pixel');
 
-function corPreta() {
-    if (pegarCorPreta.onclick){
-    pegarCorPreta.CreateElementClassName('selected');
-        if  (pixel1.onclick){
-            pixel1.color = "black";
-        }
-    }
+Document.getElementByClassName('cores').addEventListener('click');
+
+function pintarPixel() {
+    if(pixel1.onclick){
+Document.getElementByClassName('pixel').style.backgroundColor='black';
 }
-corPreta();
+}
+
