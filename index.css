@@ -1,17 +1,22 @@
 body {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	flex-flow:row;
   padding: 0px;
   margin: 0px;
 }
 
 header {
   text-align: center;
+  background-color: antiquewhite;
 }
 
 #color-palette {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 120px;
   width: 100%;
 }
 
@@ -46,7 +51,9 @@ header {
 #tudo {
   display: flex;
   flex-direction: column;
+	justify-content: center;
   align-items: center;
+	width: 100%;
 }
 
 #pixel-board {
@@ -54,7 +61,7 @@ header {
   flex-flow: column wrap;
   justify-content: center;
   height: 250px;
-  width: 206px;
+  width: 210px;
 }
 
 .pixel {
