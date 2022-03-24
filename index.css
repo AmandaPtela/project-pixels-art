@@ -22,12 +22,12 @@ h1{
 
 #color-palette {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 120px;
+  height: 50px;
   width: 100%;
-  margin-top: -25px;
-  margin-bottom: -25px;
+  padding: 1px;
+  margin-top: 25px;
 }
 
 #preto {
@@ -35,6 +35,7 @@ h1{
   border: 1px solid black;
   height: 50px;
   width: 50px;
+  border-radius: 5em;
 }
 
 /*:hover #verde {
@@ -46,6 +47,7 @@ h1{
   border: 1px solid black;
   height: 50px;
   width: 50px;
+  border-radius: 5em;
 }
 
 #rosa {
@@ -53,6 +55,7 @@ h1{
   border: 1px solid black;
   height: 50px;
   width: 50px;
+  border-radius: 5em;
 }
 
 #azul {
@@ -60,6 +63,7 @@ h1{
   border: 1px solid black;
   height: 50px;
   width: 50px;
+  border-radius: 5em;
 }
 
 #tudo {
@@ -67,19 +71,21 @@ h1{
   flex-direction: column;
 	justify-content: center;
   align-items: center;
-	width: fit-content;
+	width: 250px;
   padding: 20px;
   background-color: rgba(187, 158, 201, 0.623);
-  border-radius: 1.5em;
+  border-radius: 1.3em;
+  height: 300px;
 }
 
 #pixel-board {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  height: 250px;
+  height: 220px;
   width: 210px;
-  margin-bottom:-15px;
+  margin-top: 15px;
+  margin-bottom:20px;
 }
 
 .pixel {

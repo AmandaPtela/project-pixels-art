@@ -1,15 +1,10 @@
-const pegarCorPreta = getElementById('preto');
+const Pixel1 = GetElementById('1');
 const pegarCorVerde = getElementById('verde');
 const pegarCorRosa = getElementById('rosa');
 const pegarCorAzul = getElementById('azul');
 
-let pixel1 = getElementByClassName('pixel');
-
-Document.getElementByClassName('cores').addEventListener('click');
-
-function pintarPixel() {
-    if(pixel1.onclick){
-Document.getElementByClassName('pixel').style.backgroundColor='black';
+function pintarPixel(){
+    if(Pixel1.onclick){
+    Pixel1.style.backgroundColor="black";}
 }
-}
-
+Pixel1.addEventListener('click', pintarPixel);
