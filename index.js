@@ -1,10 +1,13 @@
-const Pixel1 = GetElementById('1');
-const pegarCorVerde = getElementById('verde');
-const pegarCorRosa = getElementById('rosa');
-const pegarCorAzul = getElementById('azul');
+const cor = document.getElementsByTagName("article");
+const pixel = document.querySelectorAll(".pixel");
 
-function pintarPixel(){
-    if(Pixel1.onclick){
-    Pixel1.style.backgroundColor="black";}
+console.log(cor);
+i = 0;
+for (; i < cor.length; i += 1){
+    cor[i].addEventListener('click', mudarCor)
+    pixel[i].style.backgroundColor="red";
+    function mudarCor(){
+        pixel[i].style.backgroundColor="";
+    }
 }
-Pixel1.addEventListener('click', pintarPixel);
+console.log(i)
