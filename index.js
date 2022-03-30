@@ -1,7 +1,7 @@
 const cores = document.querySelector('#color-palette');
 const pixels = document.querySelector('#pixel-board');
 const body = document.getElementsByTagName('body')
-const tirarSelect = cores.children[0].classList.remove('selected'); 
+//const tirarSelect = cores.children[0].classList.remove('selected'); 
 
 //window.addEventListener('load', tirarSelect);
 
