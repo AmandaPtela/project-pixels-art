@@ -1,6 +1,8 @@
 const cores = document.querySelector('#color-palette');
 const pixels = document.querySelector('#pixel-board');
+const pixelsUm = document.querySelector('.pixel');
 const body = document.getElementsByTagName('body')
+const apagar = document.getElementById('apaga-tudo');
 //const tirarSelect = cores.children[0].classList.remove('selected'); 
 
 //window.addEventListener('load', tirarSelect);
@@ -14,7 +16,7 @@ let rosa = cores.children[2];
 let azul = cores.children[3];
 
 	if(preto.className == 'color'){
-	  ev.target.classList.toggle('selected');
+	  ev.target.classList.add('selected');
 	}
 
 	else if(verde.className == 'color'){    
@@ -36,7 +38,6 @@ function pintarPixel(ev) {
 	for (let i = 0; i < 26;){
 		if (cores.children[0].classList.contains('selected')){
 			ev.target.classList.add('pixelPreto');
-			cores.children.nextSiblings.classList.remove('selected');
 				i +=1;
 		}
 		else if (cores.children[1].classList.contains('selected')){
@@ -58,3 +59,11 @@ function pintarPixel(ev) {
 	}
 }
 pixels.addEventListener('click', pintarPixel);
+
+function apagarTudo(ev) {
+	for (i = 0; i < pixelsUm;){
+		pixelsUm[i].classList.add('quadroLimpo');
+		i += 1;
+	}
+}
+apagar.addEventListener('click', apagarTudo);
