@@ -35,7 +35,8 @@ function pintarPixel(ev) {
 
 	for (let i = 0; i < 26;){
 		if (cores.children[0].classList.contains('selected')){
-			ev.target.classList.add('pixelPreto')
+			ev.target.classList.add('pixelPreto');
+			cores.children.nextSiblings.classList.remove('selected');
 				i +=1;
 		}
 		else if (cores.children[1].classList.contains('selected')){
