@@ -87,10 +87,38 @@ h1{
   margin-top: 15px;
   margin-bottom:20px;
 }
-
 .pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
+
+.pixelPreto {
+  background-color: black;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelVerde {
+  background-color: green;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelRosa {
+  background-color: pink;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelAzul {
+  background-color: blue;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
