@@ -82,8 +82,8 @@ h1{
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  height: 220px;
-  width: 210px;
+  height: 225px;
+  width: 225px;
   margin-top: 15px;
   margin-bottom:20px;
 }

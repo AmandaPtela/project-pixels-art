@@ -3,10 +3,11 @@ const pixels = document.querySelector('#pixel-board');
 const body = document.getElementsByTagName('body')
 const tirarSelect = cores.children[0].classList.remove('selected'); 
 
-window.addEventListener('load', tirarSelect);
+//window.addEventListener('load', tirarSelect);
 
 
 function pegarCor(ev) {
+
 let preto = cores.children[0];
 let verde = cores.children[1];
 let rosa = cores.children[2];
@@ -32,7 +33,7 @@ cores.addEventListener('click', pegarCor);
 
 function pintarPixel(ev) {
 
-	for (let i = 0; i < 26;){;
+	for (let i = 0; i < 26;){
 		if (cores.children[0].classList.contains('selected')){
 			ev.target.classList.add('pixelPreto')
 				i +=1;
@@ -47,6 +48,10 @@ function pintarPixel(ev) {
 		}
 		else if (cores.children[3].classList.contains('selected')){
 			ev.target.classList.add('pixelAzul');
+			i+=1;
+		}
+		else{
+			ev.target.style.backgroudColor = 'red';
 			i+=1;
 		}
 	}
