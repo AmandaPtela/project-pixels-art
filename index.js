@@ -2,40 +2,24 @@ const cores = document.querySelector('#color-palette');
 const pixels = document.querySelector('#pixel-board');
 const pixelsUm = document.querySelector('.pixel');
 const body = document.getElementsByTagName('body')
-const apagar = document.getElementById('apaga-tudo');
+const apagar = document.getElementById('clear-board');
 //const tirarSelect = cores.children[0].classList.remove('selected'); 
 
 //window.addEventListener('load', tirarSelect);
 
 
 function pegarCor(ev) {
+//resolvida com ajuda do Tássio da turma 19
+	let selecionado = document.querySelector('.selected');
+	selectecionado.classList.remove('selected');
+	ev.target.classList.add('selected');
 
-let preto = cores.children[0];
-let verde = cores.children[1];
-let rosa = cores.children[2];
-let azul = cores.children[3];
-
-	if(preto.className == 'color'){
-	  ev.target.classList.add('selected');
-	}
-
-	else if(verde.className == 'color'){    
-	  ev.target.classList.toggle('selected');
-	}
-
-	else if(rosa.className == 'color'){
-	  ev.target.classList.toggle('selected');
-	}
-	
-	else if(azul.className == 'color'){
-	  ev.target.classList.toggle('selected');
-	}
 }
 cores.addEventListener('click', pegarCor);
 
 function pintarPixel(ev) {
 
-	for (let i = 0; i < 26;){
+	for (let i = 0; i <= 25; ){
 		if (cores.children[0].classList.contains('selected')){
 			ev.target.classList.add('pixelPreto');
 				i +=1;
@@ -61,8 +45,8 @@ function pintarPixel(ev) {
 pixels.addEventListener('click', pintarPixel);
 
 function apagarTudo(ev) {
-	for (i = 0; i < pixelsUm;){
-		pixelsUm[i].classList.add('quadroLimpo');
+	for (i = 0; i < pixels;){
+		pixelsUm.classList.add('quadroLimpo');
 		i += 1;
 	}
 }
