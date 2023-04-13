@@ -43,6 +43,7 @@ botaoGerarQuadro.addEventListener('click', () => {
   const initialEl = document.querySelector('.initial-text');
   pixels.removeChild(initialEl);
   apagarTudo();
+  pixels.className = `x${row}`;
   for (let i = 0; i < Number(column) * Number(row);) {
     board();
     i += 1;
@@ -52,7 +53,7 @@ botaoGerarQuadro.addEventListener('click', () => {
 function board() {
   const board = document.createElement('article');
   pixels.appendChild(board);
-  board.className = 'pixel';
+  board.classList.add('pixel');
 
   if (pixels.className === `x` || pixels.className === `x5`) board.classList.add(`tam-x5`);
   if (pixels.className === `x15`) board.classList.add(`tam-x15`);
