@@ -79,8 +79,8 @@ pixels.addEventListener('click', pintarPixel);
 
 function apagarTudo() {
   for (let i = 0; i < pixels.children.length;) {
-    pixels.children[i].className = 'pixel';
     pixels.children[i].classList.add(`tam-x${row}`);
+    pixels.children[i].className = 'pixel';
     i += 1;
   }
 }
