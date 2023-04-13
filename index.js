@@ -7,6 +7,7 @@ const apagar = document.getElementById('clear-board');
 const botaoGerarQuadro = document.getElementById('generate-board-size');
 const option = document.querySelectorAll('.option');
 let tamanho = document.getElementById('select').value;
+const pixelsss = document.getElementsByClassName('article');
 // const areaCores = document.getElementById("colors-set-area");
 
 let column = 5;
@@ -41,7 +42,7 @@ option.forEach((option) => {
 
 botaoGerarQuadro.addEventListener('click', () => {
   const initialEl = document.querySelector('.initial-text');
-  pixels.removeChild(initialEl);
+  initialEl ? pixels.removeChild(initialEl) : '';
   apagarTudo();
   pixels.className = `x${row}`;
   for (let i = 0; i < Number(column) * Number(row);) {
@@ -77,12 +78,22 @@ function pintarPixel(ev) {
 }
 pixels.addEventListener('click', pintarPixel);
 
-function apagarTudo() {
+function limparQuadro() {
   for (let i = 0; i < pixels.children.length;) {
-    pixels.children[i].classList.add(`tam-x${row}`);
     pixels.children[i].className = 'pixel';
+    pixels.children[i].classList.add(`tam-x${row}`);
     i += 1;
   }
 }
-apagar.addEventListener('click', apagarTudo);
+
+apagar.addEventListener('click', limparQuadro);
+
+function apagarTudo() {
+  for (let i = 0; i < pixels.children.length;) {
+    pixels.children[i].className = 'pixel';
+    pixels.children[i].classList.add(`tam-x${row}`);
+    i += 1;
+  }
+}
+
 
