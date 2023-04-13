@@ -43,7 +43,6 @@ botaoGerarQuadro.addEventListener('click', () => {
   const initialEl = document.querySelector('.initial-text');
   pixels.removeChild(initialEl);
   apagarTudo();
-  pixels.className = `x${row}`;
   for (let i = 0; i < Number(column) * Number(row);) {
     board();
     i += 1;
