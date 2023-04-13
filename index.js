@@ -52,7 +52,7 @@ botaoGerarQuadro.addEventListener('click', () => {
 function board() {
   const board = document.createElement('article');
   pixels.appendChild(board);
-  board.classList.add('pixel');
+  board.className = 'pixel';
 
   if (pixels.className === `x` || pixels.className === `x5`) board.classList.add(`tam-x5`);
   if (pixels.className === `x15`) board.classList.add(`tam-x15`);
