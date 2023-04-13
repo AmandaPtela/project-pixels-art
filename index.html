@@ -1,55 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>PixelArt</title>
+    <title>Pixels Art</title>
 </head>
-<header>
-    <h1 id="title">Paleta de Cores</h1>
-</header>
-<body>
-    <div id="tudo">
-        <div id="color-palette">
-            <article id="preto" class="color selected"></article>
-            <article id="verde" class="color"></article>
-            <article id="rosa" class="color"></article>
-            <article id="azul" class="color"></article>
-        </div>
 
-        <div id="botao">
-            <button id="clear-board">Limpar</button>
-        </div>    
-        <div id="pixel-board">
-            <article id="1"  class="pixel"></article>
-            <article id="2"  class="pixel"></article>
-            <article id="3"  class="pixel"></article>
-            <article id="4"  class="pixel"></article>
-            <article id="5"  class="pixel"></article>
-            <article id="6"  class="pixel"></article>
-            <article id="7"  class="pixel"></article>
-            <article id="8"  class="pixel"></article>
-            <article id="9"  class="pixel"></article>
-            <article id="10" class="pixel"></article>
-            <article id="11" class="pixel"></article>
-            <article id="12" class="pixel"></article>
-            <article id="13" class="pixel"></article>
-            <article id="14" class="pixel"></article>
-            <article id="15" class="pixel"></article>
-            <article id="16" class="pixel"></article>
-            <article id="17" class="pixel"></article>
-            <article id="18" class="pixel"></article>
-            <article id="19" class="pixel"></article>
-            <article id="20" class="pixel"></article>
-            <article id="21" class="pixel"></article>
-            <article id="22" class="pixel"></article>
-            <article id="23" class="pixel"></article>
-            <article id="24" class="pixel"></article>
-            <article id="25" class="pixel"></article>
+<body>
+    <header>
+        <h1>Pixels Art</h1>
+    </header>
+    <div id="tudo">
+        <div id="colors-set-area">
+            <!-- <label htmlfor="color-palette">Paleta de cores</label> -->
+            <div id="color-palette"></div>
+        </div>
+        <div id="size-area">
+            <label>Tamanhos:</label>
+            <select id="select">
+                <option class="option">5x5</option>
+                <option class="option">15x15</option>
+                <option class="option">25x25</option>
+<!--                 <option class="option">35x35</option>
+                <option class="option">45x45</option> -->
+            </select>
+            <button id="generate-board-size">Gerar quadro</button>
+            <button id="clear-board">Limpar quadro</button>
+        </div>
+        <div id="pixel-board-area">
+            <div id="pixel-board" class="x"></div>
         </div>
     </div>
-<script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

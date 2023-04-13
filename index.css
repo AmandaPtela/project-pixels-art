@@ -1,138 +1,405 @@
 body {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	flex-flow:column;
-  padding: 0px;
-  padding-top: 5px;
-  margin: 0px;
+	flex-flow: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(187, 158, 201, 0.623);
 }
 
 header {
-  text-align: center;
-  min-width: 250px;
-  font-family: 'Courier New', Courier, monospace;
+  height: 12%;
 }
+
 h1{
-  background-color: rgba(187, 158, 201, 0.623);
-  padding: 20px;
-  border-radius: 1em;
   color: rgb(55, 71, 66);
 }
 
-#color-palette {
+/* PALETA DE CORES */
+#colors-set-area {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
-  height: 50px;
-  width: 250px;
-  padding-top: 20px;
+  width: 90%;
+  height: 10%;
+  border-radius: 2em;
+  background-color: rgba(187, 158, 201, 0.623);
 }
 
-#preto {
-  background-color: black;
-  border: 1px solid black;
-  height: 50px;
-  width: 50px;
-  border-radius: 5em;
+/* TAMANHO AMOSTRA DE COR */
+.color {
+  height: 20px;
+  width: 20px;
+}
+
+/* ÁREA AMOSTRA DE CORES */
+#color-palette {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 /*:hover #verde {
   height: 55px;
   width: 55px;
 }*/
-#verde{
-  background-color: green;
+/* COR AMOSTRA DE CORES */
+#Verde{
+background-color: green;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+#Rosa {
+background-color: pink;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+#Azul {
+background-color: blue;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+#Roxo {
+  background-color: purple;
   border: 1px solid black;
-  height: 50px;
-  width: 50px;
   border-radius: 5em;
 }
 
-#rosa {
-  background-color: pink;
+#Amarelo {
+  background-color: yellow;
   border: 1px solid black;
-  height: 50px;
-  width: 50px;
   border-radius: 5em;
 }
 
-#azul {
-  background-color: blue;
-  border: 1px solid black;
-  height: 50px;
-  width: 50px;
-  border-radius: 5em;
+#Laranja {
+background-color: orange;
+border: 1px solid black;
+border-radius: 5em;
 }
 
-#clear-board {
-  margin-top: 15px;
+#Vermelho {
+background-color: red;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+#Cinza {
+background-color: gray;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+#Branco {
+background-color: white;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+#Preto {
+background-color: black;
+border: 1px solid black;
+border-radius: 5em;
+}
+
+/* BOTÃO LIMPAR CORES  DO QUADRO DE PIXELS */
+/* {
   border-radius: 1em ;
   background-color:rgba(235, 148, 228, 0.63);
-  color: rgb(122, 113, 113);
+  color: rgb(55, 71, 66);
   font-weight: 500;
   font-size: 16px;
+  height: 34px;
   width: 160px;
-  height: 35px;
   border-style: groove;
   border-color: rgb(0, 0, 0);
+} */
+
+/* ÁREA INPUT AJUSTE DE TAMANHO */
+#size-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 2px 15px 2px 15px;
+  background-color: rgba(187, 158, 201, 0.623);
+  color: rgb(27, 31, 30);
+  border-radius: 1.3em;
 }
 
+/* LABEL INPUT AJUSTE DE TAMANHO */
+label {
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+/* BOTÃO AJUSTE DE TAMANHO */
+#generate-board-size, #clear-board {
+  margin-left: 15px;
+  height: 25px;
+}
+
+/* LABEL INPUT AJUSTE DE TAMANHO */
 #tudo {
   display: flex;
   flex-direction: column;
-	justify-content: center;
+	justify-content: start;
   align-items: center;
-	width: 270px;
+	width: 90%;
   background-color: rgba(187, 158, 201, 0.623);
   border-radius: 1.3em;
-  height: 360px;
+  height: 80%;
+  padding-top: 10px;
 }
 
-#pixel-board {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  height: 206px;
-  width: 225px;
-  margin-top: 20px;
-  margin-bottom:20px;
+/* DIV AREA PIXEL BOARD */
+
+.initial-state {
+  padding-top: 140px;
+  text-align: center;
+  width: 90%;
 }
-.pixel {
-  background-color: white;
-  border: 1px solid black;
+#pixel-board-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 90%;
+}
+
+/* TAMANHOS PIXELS 5X5, 15X15, 25X25 */
+.tam-x5 {
   height: 40px;
   width: 40px;
 }
 
-.pixelPreto {
+.tam-x15 {
+  height: 20px;
+  width: 20px;
+}
+
+.tam-x25 {
+  height: 10px;
+  width: 10px;
+}
+
+/* TAMANHOS AREA QUADRO DE PIXELS */
+.x, .x5 {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  width: 210px;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.x15 {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height:330px;
+  width: 330px;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.x25 {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+}
+
+/* COR PIXELS 5X5 */
+.pixelPretox5 {
   background-color: black;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixelVerde {
+.pixelVerdex5 {
   background-color: green;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixelRosa {
+.pixelRosax5 {
   background-color: pink;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixelAzul {
+.pixelAzulx5 {
   background-color: blue;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
+.pixelRoxox5 {
+  background-color: purple;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelAmarelox5 {
+  background-color: yellow;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelLaranjax5 {
+  background-color: orange;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelVermelhox5 {
+  background-color: red;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixelPretox15 {
+  background-color: black;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+/* COR PIXELS 15X15 */
+.pixelVerdex15 {
+  background-color: green;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+.pixelRosax15 {
+  background-color: pink;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+.pixelAzulx15 {
+  background-color: blue;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+.pixelRoxox15 {
+  background-color: purple;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+.pixelAmarelox15 {
+  background-color: yellow;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+.pixelLaranjax15 {
+  background-color: orange;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+.pixelVermelhox15 {
+  background-color: red;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+
+/* COR PIXELS 25X25 */
+.pixelPretox25 {
+  background-color: black;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelVerdex25 {
+  background-color: green;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelRosax25 {
+  background-color: pink;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelAzulx25 {
+  background-color: blue;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelRoxox25 {
+  background-color: purple;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelAmarelo25 {
+  background-color: yellow;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelLaranjax25 {
+  background-color: orange;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+.pixelVermelhox25 {
+  background-color: red;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
+
+/* BOTÃO LIMPAR CORES DO QUADRO */
 .quadroLimpo {
   background-color: white;
 }
