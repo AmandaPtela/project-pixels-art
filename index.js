@@ -71,7 +71,7 @@ cores.forEach((index) => coresUm[index]
 function pintarPixel(ev) {
   const coresPaleta = cores.map((index) => coresUm[index]);
   const selected = coresPaleta.find((i) => i.className.includes('selected'))
-  for (let i = 0; i < coresPaleta.length;) {
+  for (let i = 0; i <= coresPaleta.length;) {
     ev.target.className = `pixel${selected.id}x${row}`;
     i += 1;
   }
